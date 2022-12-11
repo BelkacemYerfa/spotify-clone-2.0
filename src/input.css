@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body::-webkit-scrollbar{
+ display: none;
+}
+
+.login {
+ display: grid;
+ place-items: center;
+ height: 100vh;
+ background-color: black;
+}
+
+.login > img {
+ padding: 20px;
+ width: auto  ;
+ height: 170px;
+}
+
+.login > a {
+ padding: 20px;
+ border-radius: 99px;
+ font-weight: 600;
+ color: white;
+ text-decoration: none;
+ background-color: #1db954;
+}
+
+
+@layer {
+  .App{
+   @apply w-screen
+  }
+  .container {
+   @apply flex items-center h-fit w-full !important
+  }
+  .sideBar{
+   @apply min-h-screen basis-[20%] min-w-[190px] p-2 bg-sideBarBg text-white ; 
+  }
+  .logo{
+   @apply min-h-[70px] w-[170px] object-contain p-[10px] m-auto
+  }
+  .SideBarOption{
+   @apply flex gap-2 items-center cursor-pointer text-gray-500 font-medium h-10 ease-in-out duration-200 hover:text-white px-2
+  }
+  .playlist{
+   @apply text-sm ml-3 font-medium h-fit py-1 min-h-[40px] flex items-center !important
+  }
+  .hLine{
+   @apply w-[90%] border border-solid border-webPlayerBg ml-2 !important
+  }
+  .Playlist{
+   @apply flex items-start justify-center flex-col gap-y-4
+  }
+  .body{
+   @apply h-screen basis-[80%] bg-bodyBg text-white p-7 ; 
+  }
+  .header{
+    @apply w-full 
+  }
+  .head{
+    @apply flex w-full justify-between items-center
+  }
+  .format{
+    @apply flex items-center justify-center gap-x-2 bg-white h-12 px-2 text-gray-500 w-[50%] rounded-lg !important
+  }
+  .searchInput{
+    @apply w-full outline-none border-none h-[80%]
+  }
+  .avatar-holder{
+    @apply flex items-center gap-x-2 cursor-pointer duration-300 ease-in-out h-fit p-1 font-medium rounded-md hover:bg-webPlayerBg
+  }
+  .profile{
+    @apply mt-10 flex flex-col items-start md:flex-row md:items-center gap-4
+  }
+  .profileImage{
+    @apply rounded-[50%] basis-[30%] 
+  } 
+  .userProfileInfo{
+    @apply flex flex-col basis-[70%]
+  }
+  .section{
+    @apply text-base font-medium uppercase m-0 p-0 !important
+  }
+  .userName{
+    @apply font-bold text-[60px] md:text-[90px] tracking-tighter !important
+  }
+  .playlistInfo{
+    @apply w-full mt-7 flex flex-col md:flex-row items-start md:items-end gap-x-2
+  }
+  .PlaylistImage{
+    @apply w-[80%] sm:w-[50%] md:w-[20%] h-auto rounded  !important
+  }
+  .infoPlay{
+    @apply h-full 
+  }
+  .play{
+    @apply font-medium text-sm mt-2 md:mt-0 md:text-base !important
+  }
+  .playListTitle{
+    @apply font-medium text-xl sm:text-2xl md:text-3xl mb-2 !important
+  }
+  .username{
+    @apply font-medium text-sm md:text-base text-gray-400 cursor-pointer  hover:underline ;
+  }
+  .list{
+    @apply w-full flex mt-3 flex-col gap-y-2 
+  }
+  .song{
+    @apply px-2 py-2 cursor-pointer flex gap-1 items-center w-full duration-300 ease-in-out hover:bg-gray-600/40 rounded-lg
+  }
+  .infoData{
+    @apply w-full flex flex-col items-start justify-between h-full gap-0
+  }
+  .songIcon{
+    @apply h-[50px] rounded mr-2 w-auto !important
+  }
+  .songName{
+    @apply font-medium text-base !important
+  }
+  .songArtitst{
+    @apply flex items-center w-full font-medium text-sm text-gray-500 !important
+  }
+  .webPlayer{
+   @apply fixed h-16 bottom-0 bg-webPlayerBg p-5 flex justify-between w-full px-4 items-center
+  }
+  .SongsData{
+   @apply flex items-center gap-2 basis-[33%] ; 
+  }
+  .iconMusic{
+   @apply h-14 w-14 rounded-lg 
+  }
+  .songName{
+   @apply cursor-pointer text-sm font-medium text-white 
+  }
+  .author{
+   @apply cursor-pointer text-sm font-medium text-white hover:underline capitalize
+  }
+  .songDataholder{
+   @apply flex h-full items-start justify-center gap-y-1 flex-col
+  }
+  .mainPlayer{
+   @apply flex items-center gap-3 basis-[33%]
+  }
+  .animated {
+   @apply duration-300 ease-in-out hover:scale-110 !important
+  }
+  .pointer{
+   @apply cursor-pointer duration-200 ease-linear text-white/50 hover:text-white
+  }
+  .changer{
+   @apply text-Btns
+  }
+  .sound{
+    @apply flex items-center gap-4 basis-[20%]
+  }
+  .slider{
+   @apply text-Btns
+  }
+}
